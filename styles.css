@@ -13,8 +13,8 @@ body::before {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 2000px;
-    height: 2000px;
+    width: 500px;
+    height: 500px;
     background: url('images/pizza-bg.png') no-repeat center center;
     background-size: contain;
     opacity: 0.1;
@@ -33,7 +33,7 @@ header {
     background-color: #ff5722;
     color: white;
     padding: 10px 20px;
-    text-align: CENTER;
+    text-align: center;
     position: relative;
     z-index: 1;
 }
@@ -56,7 +56,7 @@ nav a:hover {
 }
 
 nav a.active {
-    background-color: #e64a19; /* Темнее оранжевого для активной вкладки */
+    background-color: #e64a19;
     font-weight: bold;
 }
 
@@ -71,20 +71,26 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     position: relative;
     bottom: 0;
     width: 100%;
     z-index: 1;
 }
 
-/* Главная */
-.hero {
-    text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(to bottom, rgba(255, 87, 34, 0.2), #2b2b2b);
+footer p {
+    margin: 5px 0;
 }
 
+footer .disclaimer {
+    font-size: 0.9em;
+    color: #ff5722;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Главная */
+.hero { text-align: center; padding: 40px 20px; background: linear-gradient(to bottom, rgba(255, 87, 34, 0.2), #2b2b2b); }
 .slider { max-width: 600px; margin: 0 auto; overflow: hidden; }
 .slide { display: none; padding: 20px; }
 .slide.active { display: block; }
