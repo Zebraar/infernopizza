@@ -22,8 +22,10 @@
         <section class="menu">
             <h2>Наше меню</h2>
             <button id="custom-pizza-btn">Создай свою пиццу</button>
+
+            <!-- Пиццы -->
+            <h3>Пиццы</h3>
             <div class="pizza-grid">
-                <!-- Существующие карточки пицц остаются без изменений -->
                 <div class="pizza-card">
                     <img src="images/pizza1.jpg" alt="Пепперони">
                     <h3>Пепперони</h3>
@@ -85,14 +87,71 @@
                     <button class="add-to-cart" data-name="Барбекю" data-price="3600">В корзину (3600 тг.)</button>
                 </div>
             </div>
-            <div class="cart">
-                <h3>Корзина</h3>
-                <ul id="cart-items"></ul>
-                <p>Итого: <span id="cart-total">0</span> тг.</p>
-                <button id="order-btn">Заказать</button>
+
+            <!-- Закуски -->
+            <h3>Закуски</h3>
+            <div class="pizza-grid">
+                <div class="pizza-card">
+                    <img src="images/snack1.jpg" alt="Картофель фри">
+                    <h3>Картофель фри</h3>
+                    <p>Хрустящий картофель</p>
+                    <button class="add-to-cart" data-name="Картофель фри" data-price="800">В корзину (800 тг.)</button>
+                </div>
+                <div class="pizza-card">
+                    <img src="images/snack2.jpg" alt="Куриные крылышки">
+                    <h3>Куриные крылышки</h3>
+                    <p>Жареные с соусом</p>
+                    <button class="add-to-cart" data-name="Куриные крылышки" data-price="1200">В корзину (1200 тг.)</button>
+                </div>
+                <div class="pizza-card">
+                    <img src="images/snack3.jpg" alt="Сырные палочки">
+                    <h3>Сырные палочки</h3>
+                    <p>Моцарелла в панировке</p>
+                    <button class="add-to-cart" data-name="Сырные палочки" data-price="1000">В корзину (1000 тг.)</button>
+                </div>
             </div>
-        </section>
+
+            <!-- Напитки -->
+            <h3>Напитки</h3>
+            <div class="pizza-grid">
+                <div class="pizza-card">
+                    <img src="images/drink1.jpg" alt="Кола">
+                    <h3>Кола</h3>
+                    <p>Газированный напиток</p>
+                    <button class="add-to-cart" data-name="Кола" data-price="400">В корзину (400 тг.)</button>
+                </div>
+                <div class="pizza-card">
+                    <img src="images/drink2.jpg" alt="Лимонад">
+                    <h3>Лимонад</h3>
+                    <p>Лимон и мята</p>
+                    <button class="add-to-cart" data-name="Лимонад" data-price="500">В корзину (500 тг.)</button>
+                </div>
+                <div class="pizza-card">
+                    <img src="images/drink3.jpg" alt="Чай">
+                    <h3>Чай</h3>
+                    <p>Черный с лимоном</p>
+                    <button class="add-to-cart" data-name="Чай" data-price="350">В корзину (350 тг.)</button>
+                </div>
             </div>
+
+            <!-- Десерты -->
+            <h3>Десерты</h3>
+            <div class="pizza-grid">
+                <div class="pizza-card">
+                    <img src="images/dessert1.jpg" alt="Тирамису">
+                    <h3>Тирамису</h3>
+                    <p>С маскарпоне</p>
+                    <button class="add-to-cart" data-name="Тирамису" data-price="900">В корзину (900 тг.)</button>
+                </div>
+                <div class="pizza-card">
+                    <img src="images/dessert2.jpg" alt="Чизкейк">
+                    <h3>Чизкейк</h3>
+                    <p>С ягодным соусом</p>
+                    <button class="add-to-cart" data-name="Чизкейк" data-price="850">В корзину (850 тг.)</button>
+                </div>
+            </div>
+
+            <!-- Корзина -->
             <div class="cart">
                 <h3>Корзина</h3>
                 <ul id="cart-items"></ul>
@@ -101,7 +160,7 @@
             </div>
         </section>
 
-        <!-- Модальное окно для заказа -->
+        <!-- Модальные окна остаются без изменений -->
         <div id="order-modal" class="modal">
             <div class="modal-content">
                 <h2>Оформление заказа</h2>
@@ -119,13 +178,12 @@
             </div>
         </div>
 
-        <!-- Модальное окно для конструктора пиццы -->
         <div id="custom-pizza-modal" class="modal">
             <div class="modal-content">
                 <h2>Создай свою пиццу</h2>
                 <form id="custom-pizza-form">
                     <label for="pizza-name">Назови свою пиццу:</label>
-                    <input type="text" id="pizza-name" placeholder="Моя Адская Пицца" required>
+                    <input type="text" id="pizza-name" placeholder="Моя Пицца" required>
                     <label>Выбери ингредиенты:</label>
                     <div class="ingredients">
                         <label><input type="checkbox" name="ingredient" value="Пепперони" data-price="500"> Пепперони (+500 тг.)</label>
